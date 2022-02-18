@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raket: Commission an Artist — a UI/UX Case Study - Joshua Salazar</title>
+
+    <link rel="shortcut icon" href="/assets/favicon.png">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <div class="d-grid gap-10 wrapper mx-auto p-8">
+        <nav class="d-flex align-items-center justify-content-space-between">
+            <a href="/" class="link-reset"><strong>Joshua Salazar</strong></a>
+            <ul class="d-flex list-reset gap-4">
+                <li><a href="/works.html" class="link-reset"><strong>Works</strong></a></li>
+                <li><a href="/about.html" class="link-reset">About</a></li>
+            </ul>
+        </nav>
+        <main>
+            <article class="mx-auto">
+                <header>
+                    <h1>Raket: Commission an Artist — a UI/UX Case Study</h1>
+                    <p>A mobile app where Filipino artists can offer their services and easily connect with clients.</p>
+                    <img src="/assets/works/Raket.jpg" alt="" class="my-8 radius">
+                </header>
+    
+                <section id="introduction">
+                    <h2>Introduction</h2>
+                    <p>
+                        There are artists-for-hire communities in apps such as Facebook, Twitter, and Reddit. They follow a
+                        system where artists and clients use tags when posting. <b>#ForHire</b> is
+                        used by artists to show their
+                        works and general idea of their pricing, whereas, <b>#LookingFor</b> is
+                        used by clients with specific
+                        requests. Client's posts includes details and/or example of what they're looking for.
+                    </p>
+                    <p>
+                        Recently, I decided to look for a Filipino artist online. I have browsed through several apps,
+                        however, the apps mentioned are not easy to use as they do not have the capability to filter search
+                        based on art styles and/or by price range.
+                    </p>
+    
+                    <h3>THE PROBLEM</h3>
+                    <p>
+                        Despite having artists-for-hire communities in several apps that help connecting artists and
+                        clients, the platform is not really designed for them making it challenging to use.
+                    </p>
+    
+                    <h3>USERS & AUDIENCE</h3>
+                    <p>
+                        The target users of Raket are local artists and people who are looking to make a custom art. These
+                        people are heavy users of Facebook, Twitter, and Instagram.
+                    </p>
+    
+                    <h3>WHAT I DID</h3>
+                    <p>
+                    <ul>
+                        <li>Research</li>
+                        <li>UX Design</li>
+                        <li>UI Design</li>
+                    </ul>
+                    </p>
+    
+                    <h3>COMPETITOR RESEARCH</h3>
+                    <p>
+                        Fiverr is the world's largest freelance service marketplace available, however, I found out that the
+                        majority of local artists utilize applications such as Facebook, Instagram and Twitter to promote
+                        their artworks and connect with clients. They also use popular local credit cards, G-Cash, and
+                        Paymaya as payment methods, and PayPal to accommodate international clients.
+                    </p>
+                    <p>
+                        I analyzed the different qualities of the above-mentioned apps and identified the features that I
+                        can improve, implement, and avoid.
+                    </p>
+    
+                    <h3>SOME TERMS USED</h3>
+                    <p>Think of this as a marketplace like Amazon where there are sellers, buyers, and items.</p>
+                    <ul>
+                        <li><b>Artists</b> - They are the sellers</li>
+                        <li><b>Clients</b> - They are the buyers</li>
+                        <li><b>Raket(s)</b> - The name of the app. It is also the service (item) offered by the
+                            artists (sellers)</li>
+                        <li><b>Local</b> - Filipino or Philippines</li>
+                    </ul>
+    
+                    <p><em><small><b>Note:</b> I am not affiliated with Raket.ph by
+                                Fullstack HQ. I already thought of the name and the idea of what the app would be before
+                                seeing
+                                their website.</small></em></p>
+                </section>
+    
+                <hr class="my-10">
+    
+                <section id="user-persona" class="persona-wrapper">
+                    <h2>User Persona</h2>
+                    <p>
+                        Julia is based on myself and my assumptions by reading countless of client’s commission requests
+                        under the tag of <a href=""><strong>#LookingFor</strong></a>. Julia allowed me to direct my design
+                        efforts with her needs in mind.
+                    </p>
+                    <div class="d-grid gap-4 p-4 bg-light2 radius">
+                        <div class="persona__intro d-grid align-items-center bg-light radius p-4 gap-4">
+                            <img src="../assets/raket/user-persona.png" alt="" class="my-8 radius">
+                            <div>
+                                <h3>Julia Ambrosio</h3>
+                                <ul>
+                                    <li>21, single, lives in Metro Manila</li>
+                                    <li>Works as a Freelance Designer</li>
+                                </ul>
+                            </div>
+                            <div class="col-2">
+                                <blockquote><em>"I like to support artists and going to art events"</em></blockquote>
+                            </div>
+                        </div>
+    
+                        <div class="d-grid grid-12 gap-4">
+                            <div class="col-6">
+                                <h4>Goals</h4>
+                                <ul>
+                                    <li><small>Buy a custom art for her little sister</small></li>
+                                    <li><small>See credibility of the artist</small></li>
+                                </ul>
+                            </div>
+        
+                            <div class="col-6">
+        
+                                <h4>Motivations</h4>
+                                <ul>
+                                    <li><small>Find local artists to commission</small></li>
+                                    <li><small>Support local artists</small></li>
+                                </ul>
+                            </div>
+        
+                            <div class="col-6">
+                                <h4>Frustrations</h4>
+                                <ul>
+                                    <li><small>Has no credit card</small></li>
+                                    <li><small>Can't search based on art styles</small></li>
+                                </ul>
+                            </div>
+        
+                            <div class="col-6">
+        
+                                <h4>Familiar Apps</h4>
+                                <ul class="d-flex gap-4 list-reset apps">
+                                    <li><img src="../assets/icons/logo-facebook.svg" alt="Facebook"></li>
+                                    <li><img src="../assets/icons/logo-twitter.svg" alt="Twitter"></li>
+                                    <li><img src="../assets/icons/logo-instagram.svg" alt="Instagram"></li>
+                                    <li><img src="../assets/icons/logo-reddit.svg" alt="Reddit"></li>
+                                </ul>
+                            </div>
+                        </div>
+    
+                    </div>
+                </section>
+    
+                <hr class="my-10">
+    
+                <section id="homepage">
+                    <h2>Homepage</h2>
+                    <p>
+                        Since local artists are heavy users of social media, I want the users to think that they are on
+                        another social media app.
+                    </p>
+                    <p>
+                        I purposely made the thumbnail large so users can better appreciate the artwork.
+                    </p>
+    
+    
+    
+                    <iframe frameBorder="0"
+                        src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FntF6fuFZihvNCdPW4tVjLH%2FRaket---UI%252FUX-Case-Study%3Fpage-id%3D2163%253A3614%26node-id%3D2163%253A3615%26viewport%3D264%252C48%252C0.6%26scaling%3Dscale-down-width%26hide-ui%3D1&amp;chrome=DOCUMENTATION"></iframe>
+                </section>
+    
+                <hr class="my-10">
+    
+                <section id="commission-details">
+                    <h2>Commission Details</h2>
+                    <p>
+                        Offered packages are different from artist to artist. Some may offer sketches to full colored
+                        illustrations. Some may offer a bust to a full body. But one thing I noticed is packages always have
+                        different prices. With this in mind, I labeled the packages by price instead of names such as Basic,
+                        Standard and Premium. I believe this is also more convenient to users since this is a marketplace
+                        afterall and users are likely to have a budget.
+                    </p>
+                    <img src="/assets/raket/commission-details.jpg" alt="" class="my-8 radius">
+                </section>
+    
+                <hr class="my-10">
+    
+                <section id="payment-method">
+                    <h2>Payment Method</h2>
+                    <p>The majority of local artists use local credit/debit cards and e-wallets such as <strong>GCash,
+                            PayMaya, and Paypal</strong>. I included all of this to payment method to accomplish financial
+                        transactions
+                        faster.</p>
+                    <img src="/assets/raket/payment-method.jpg" alt="" class="my-8 radius">
+                </section>
+    
+                <hr class="my-10">
+    
+                <section id="filter-search">
+                    <h2>Filter your search results</h2>
+                    <p>
+                        Searching in apps like Facebook and Twitter is challenging as users have to search the exact phrase
+                        or word.
+                    </p>
+                    <p>
+                        I believe that each person has their own preference in art styles. Filtering search based on art
+                        styles, inclusions, and price is made easy.
+                    </p>
+                    <img src="/assets/raket/filter-results.jpg" alt="" class="my-8 radius">
+                </section>
+    
+                <hr class="my-10">
+    
+                <section id="post-a-request">
+                    <h2>Anything specific in mind? Post a request.</h2>
+                    <p>
+                        As mentioned above, there is a system used in artists-for-hire communities. I enhanced the said
+                        system separating the <b>#ForHire</b></a> (Rakets) and <b>#LookingFor</b> (Hiring Artists) sections in order to reduce
+                        clutter and improve navigation.
+                    </p>
+                    <p>
+                        Furthermore, I added a feature where artists can send offers to clients inside the conversation.
+                        This will make the order customizable to accommodate specific requests from clients.
+                    </p>
+                    <img src="/assets/raket/request.jpg" alt="" class="my-8 radius">
+                </section>
+    
+                <hr class="my-10">
+    
+                <section id="building-trust">
+                    <h2>Building Trust</h2>
+                    <p>
+                        Credibility is an essential factor in a marketplace. To help artists make the potential clients
+                        comfortable about moving forward with them, I added a Portfolio tab so artists can showcase their
+                        previous works. In addition, a feedback section will allow them to gain more trust.
+                    </p>
+                    <img src="/assets/raket/artists-profile.jpg" alt="" class="my-8 radius">
+                </section>
+    
+                <hr class="my-10">
+    
+                <section id="conclusion">
+                    <h2>Moving Forward</h2>
+                    <p>If I had more time and resources, I would:</p>
+                    <ol>
+                        <li>Conduct user research and not based them on my assumptions.</li>
+                        <li>Create a prototype and conduct user tests.</li>
+                        <li>Develop the mobile app.</li>
+                    </ol>
+                </section>
+    
+                <hr class="my-10">
+    
+                <section>
+                    <h4>I would like to thank these amazing artists:</h4>
+                    <ul>
+                        <li><a href="https://www.instagram.com/aeyochi/" target="_blank"><strong>@aeyochi</strong></a></li>
+                        <li><a href="https://www.instagram.com/artofutes/" target="_blank"><strong>@artofutes</strong></a>
+                        </li>
+                        <li><a href="https://www.instagram.com/ginger_art3/"
+                                target="_blank"><strong>@ginger_art3</strong></a></li>
+                        <li><a href="https://www.instagram.com/giu_zel/" target="_blank"><strong>@giu_zel</strong></a></li>
+                        <li><a href="https://www.instagram.com/heymikomiks/"
+                                target="_blank"><strong>@heymikomiks</strong></a></li>
+                        <li><a href="https://www.instagram.com/koalanov/" target="_blank"><strong>@koalanov</strong></a>
+                        </li>
+                        <li><a href="https://www.instagram.com/mouriesse/" target="_blank"><strong>@mouriesse</strong></a>
+                        </li>
+                    </ul>
+                    <p><small>They're the owners of the illustrations I used to design this project. All credits goes to
+                            them.</small>
+                    <p>
+                </section>
+    
+                <div id="disqus_thread" class="p-8 my-8 radius bg-light2"></div>
+                <script>
+                    /**
+                    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+                    /*
+                    var disqus_config = function () {
+                    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+                    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                    };
+                    */
+                    (function () { // DON'T EDIT BELOW THIS LINE
+                        var d = document, s = d.createElement('script');
+                        s.src = 'https://joshuasalazar-disqus-com.disqus.com/embed.js';
+                        s.setAttribute('data-timestamp', +new Date());
+                        (d.head || d.body).appendChild(s);
+                    })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered
+                        by Disqus.</a></noscript>
+    
+                <div class="mt-4 sm-text-center">
+                    <a href=""><b><small>Next Work</small><span class="d-block h2">Blink Creative Studio</span></b></a>
+                </div>
+            </article>
+        </main>
+        <footer class="d-flex justify-content-space-between mt-10 sm-flex-col sm-text-center">
+            <p class="m-0 sm-mb-4"><small><strong class="sm-d-block">Made with 💖 by Joshua Salazar.</strong> It's ok if you
+                    didn't read everything. </small></p>
+            <button onclick=" window.scrollTo(0, 0);" class="uppercase"><b><small>Back to top</small></b></button>
+        </footer>
+    </div>
+
+
+    <script id="dsq-count-scr" src="//joshuasalazar-disqus-com.disqus.com/count.js" async></script>
+</body>
+
+</html>

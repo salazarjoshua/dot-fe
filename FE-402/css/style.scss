@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700");
+
+@import "reset";
+@import "variables";
+@import "utilities";
+@import "typography";
+
+
+article {
+    max-width: 540px;
+}
+
+
+hr {
+    border: none;
+    height: 1.25rem;
+    background: url(/assets/wavy-line.svg) center no-repeat;
+}
+
+/** ARTICLE DETAIL *****/
+
+article {
+    h3 {
+        font-size: 1rem;
+        line-height: 1.5rem;
+        margin-bottom: 0.25rem;
+    }
+
+    h3 + p {
+        margin: 0;
+    }
+    
+}
+
+.persona__intro {
+    grid-template-columns: auto 1fr;
+    border: 2px solid $border-color;
+
+    img {
+        max-width: 75px;
+        margin: 0;
+    }
+}
+
+blockquote {
+    border-left: 0.25rem solid $border-color;
+    padding: 0.5rem 1rem;
+    quotes: "\201C""\201D""\2018""\2019";
+}
+
+.apps {
+    li img {
+        width: 1.5rem;
+    }
+}
+
+iframe {
+    border-radius: $radius;
+    border: none;
+    box-shadow: none;
+    background-color: $light-color-2;
+    aspect-ratio: 1 / 1;
+    width: 100%;
+    min-height: 320px;
+    height: auto;
+    margin: 1rem 0;
+}
+
+
+
+  
+/** HOMEPAGE DETAIL *****/
+.homepage {
+    header{
+        h1 {
+            font-size: 3rem;
+            line-height: 1.25;
+                span {
+                font-size: 0.875rem;
+                font-weight: 400;
+                margin-bottom: 0.25rem;
+                line-height: 1;
+                // display: block;
+            }
+        }
+    
+        p {
+            max-inline-size: 40ch;
+        }
+    }
+}
+
+.card {
+    transition: transform 0.25s ease;
+
+    &__img {
+        margin: 0;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+    }
+
+    h3 {
+        font-size: 0.875rem;
+        line-height: 1.2rem;
+        font-weight: 600;
+        height: 3.6rem;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+    }
+    &:hover {
+        transform: scale(1.03);
+    }
+
+    a {
+        align-self: flex-start;
+    }
+}
+
+.wave {
+    animation-name: wave-animation;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+    transform-origin: 80% 80%; 
+    display: inline-block!important;
+}
+
+@keyframes wave-animation {
+    0% { transform: rotate( 0.0deg) }
+   10% { transform: rotate(14.0deg) }
+   20% { transform: rotate(-8.0deg) }
+   30% { transform: rotate(14.0deg) }
+   40% { transform: rotate(-4.0deg) }
+   50% { transform: rotate(10.0deg) }
+   60% { transform: rotate( 0.0deg) }
+  100% { transform: rotate( 0.0deg) }
+}
+
+
+/*----- ABOUT PAGE -----*/
+
+
+
+@media only screen and (max-width: 40rem) {
+    html {
+        font-size: 14px;
+    }
+
+    .about {
+        img {
+            max-width: 100px;
+        }
+    }
+}

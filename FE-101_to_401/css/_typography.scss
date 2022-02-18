@@ -1,0 +1,77 @@
+h1 {
+    font-size: 2rem;
+    line-height: 2.5rem;
+
+    + p {
+        margin: 0.5rem 0;
+    }
+}
+
+h2 {
+    font-size: 1.5rem;
+    line-height: 2.25rem;
+    margin-bottom: 0.5rem;
+}
+
+h3,
+h4 {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    margin-bottom: 0.25rem;
+}
+
+p {
+    margin: 1.2rem 0;
+}
+
+p + h3 {
+    margin-top: 2rem;
+}
+
+a,
+button {
+    text-decoration: none;
+    color: inherit;
+    background: linear-gradient($color-accent, $color-accent);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 100% 2px;
+    transition: background-size 0.2s;
+
+    &:hover,
+    &:focus {
+        background-size: 100% 8px;
+    }
+
+    &:focus-visible {
+        outline: 2px dashed;
+        outline-offset: 0.25rem;
+    }
+}
+
+button {
+    border: none;
+    background: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.no-bg {
+    background: none;
+}
+
+strong,
+b {
+    font-weight: 600;
+}
+
+ul,
+ol {
+    padding-inline-start: 1.25rem;
+
+    &.no--bullets {
+        padding: 0;
+        list-style-type: none;
+    }
+}
